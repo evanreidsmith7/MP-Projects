@@ -1,142 +1,85 @@
-# EE Microprocessors Labs - TXST University
+# EE 3420 Microprocessors Labs
 
-## Overview
+This repository contains the laboratory projects for the EE 3420 Microprocessors class at Texas State University. Each lab is implemented using the Arduino Mega 2560 and associated peripherals.
 
-This repository contains the lab projects completed for the EE Microprocessors class at Texas State University. Each lab utilizes Arduino microcontrollers to demonstrate various concepts in microprocessor and embedded systems programming.
+## Labs
 
-## Table of Contents
+### Lab 1: UART Communication – Perfect Triangle Generator
 
-1. [Lab 1: Introduction to Arduino](#lab-1-introduction-to-arduino)
-2. [Lab 2: Digital I/O](#lab-2-digital-io)
-3. [Lab 3: Analog I/O](#lab-3-analog-io)
-4. [Lab 4: Timers and Interrupts](#lab-4-timers-and-interrupts)
-5. [Lab 5: Serial Communication](#lab-5-serial-communication)
-6. [Lab 6: Sensor Integration](#lab-6-sensor-integration)
-7. [Lab 7: Motor Control](#lab-7-motor-control)
-8. [Lab 8: Final Project](#lab-8-final-project)
+- **Description**: This lab involves creating an interactive console interface through the UART to find "perfect" triangles, where all three sides have integer lengths.
+- **Files**:
+  - [Lab 1 Code](./Labs/ee3420lab1/ee3420lab1.ino)
 
-## Lab 1: Introduction to Arduino
+### Lab 2: General-Purpose Input-Output (GPIO) – Keypad and Character LCD
 
-**Objective:** Learn the basics of Arduino programming and setup.
+- **Description**: Extend user input and output options using a 4x4 telephone-style keypad and character LCD display. Also involves communication using a serial connection to another microprocessor.
+- **Files**:
+  - [Lab 2 Code](./Labs/ee3420lab2/ee3420lab2.ino)
+  - [ASCII Header](./Labs/ee3420lab2/ASCII.h)
+  - [Aux Board Header](./Labs/ee3420lab2/ee3420_mega_aux_board.h)
+  - [Keypad Header](./Labs/ee3420lab2/Keypad.h)
 
-**Key Concepts:**
+### Lab 3: General-Purpose Input-Output (GPIO) – Stepper Motor Control
 
-- Arduino IDE setup
-- Basic structure of an Arduino sketch
-- Simple LED blinking program
+- **Description**: Control a four-phase unipolar stepper motor using GPIO pins and a ULN2003A/ULN2803A driver.
+- **Files**:
+  - [Lab 3 Code](./Labs/ee3420lab3/ee3420lab3.ino)
+  - [Aux Board Header](./Labs/ee3420lab3/ee3420_mega_aux_board.h)
 
-**Files:**
+### Lab 4: General-Purpose Input-Output (GPIO) – Traffic Control
 
-- `Lab1_Blink.ino`
+- **Description**: Simulate a traffic light controller for an intersection using two microprocessors communicating via Serial1.
+- **Files**:
+  - [Lab 4 Code](./Labs/ee3420lab4/ee3420lab4.ino)
+  - [Aux Board Header](./Labs/ee3420lab4/ee3420_mega_aux_board.h)
 
-## Lab 2: Digital I/O
+### Lab 5: Pulse-Width Modulation – DC Motor Control and Servo Motor Control
 
-**Objective:** Understand digital input and output operations.
+- **Description**: Control a DC motor and a servo motor using PWM signals. Adjust motor speed and servo position based on user inputs.
+- **Files**:
+  - [Lab 5 Code](./Labs/ee3420lab5/ee3420lab5.ino)
+  - [Lab 5 Part 1 Code](./Labs/ee3420lab5p1/ee3420lab5p1.ino)
 
-**Key Concepts:**
+### Lab 6: Analog-to-Digital Converters (ADC) – Sensors and Measurement
 
-- DigitalRead and DigitalWrite functions
-- Using push buttons and LEDs
+- **Description**: Read sensor data using ADC and control physical systems based on the sensor input. Sensors include a joystick, photoresistor, and thermometer.
+- **Files**:
+  - [Lab 6 Code](./Labs/ee3420lab6/ee3420lab6.ino)
+  - [ADC Board Header](./Labs/ee3420lab6/ee3420_mega_adc_board.h)
+  - [Aux Board Header](./Labs/ee3420lab6/ee3420_mega_aux_board.h)
 
-**Files:**
+### Lab 7: Serial Peripheral Interconnect (SPI) – Extending GPIO
 
-- `Lab2_DigitalIO.ino`
+- **Description**: Use SPI to interact with peripherals, conserving GPIO pins. Interfaces include a 74HC595 shift register and an 8x8 LED dot matrix display.
+- **Files**:
+  - [Lab 7 Code](./Labs/ee3420lab7/ee3420lab7.ino)
+  - [ASCII Header](./Labs/ee3420lab7/ASCII.h)
+  - [ADC Board Header](./Labs/ee3420lab7/ee3420_mega_adc_board.h)
+  - [Aux Board Header](./Labs/ee3420lab7/ee3420_mega_aux_board.h)
 
-## Lab 3: Analog I/O
+### Lab 8: Inter-Integrated Circuit (I2C) – Real-Time Clock and EEPROM
 
-**Objective:** Explore analog input and output using the Arduino.
+- **Description**: Interface with a DS3231 RTC and an AT24C32 EEPROM using I2C. Read, set, and store time data.
+- **Files**:
+  - [Lab 8 Code](./Labs/ee3420lab8/ee3420lab8.ino)
+  - [ASCII Header](./Labs/ee3420lab8/ASCII.h)
+  - [Aux Board Header](./Labs/ee3420lab8/ee3420_mega_aux_board.h)
+  - [RTC Library](./Labs/ee3420lab8/data/RTClib-2.1.1.zip)
 
-**Key Concepts:**
+### Lab 9: Integrated Application – Weather Station
 
-- AnalogRead and AnalogWrite functions
-- Potentiometers and PWM
+- **Description**: Create a weather station that gathers and stores weather-related data such as temperature, light level, and air quality.
+- **Files**:
+  - [Lab 9 Code](./Labs/ee3420lab9/ee3420lab9.ino)
+  - [Lab 9 Receiver Code](./Labs/ee3420lab9unoRecieve/ee3420lab9unoRecieve.ino)
+  - [ASCII Header](./Labs/ee3420lab9/ASCII.h)
+  - [ADC Board Header](./Labs/ee3420lab9/ee3420_mega_adc_board.h)
+  - [Aux Board Header](./Labs/ee3420lab9/ee3420_mega_aux_board.h)
 
-**Files:**
+## Usage
 
-- `Lab3_AnalogIO.ino`
-
-## Lab 4: Timers and Interrupts
-
-**Objective:** Implement timers and interrupts in Arduino sketches.
-
-**Key Concepts:**
-
-- Timer functions
-- Interrupt Service Routines (ISR)
-
-**Files:**
-
-- `Lab4_TimersInterrupts.ino`
-
-## Lab 5: Serial Communication
-
-**Objective:** Utilize serial communication for data transmission.
-
-**Key Concepts:**
-
-- Serial.begin(), Serial.print(), and Serial.read() functions
-- Communication between Arduino and a computer
-
-**Files:**
-
-- `Lab5_SerialCommunication.ino`
-
-## Lab 6: Sensor Integration
-
-**Objective:** Integrate various sensors with the Arduino.
-
-**Key Concepts:**
-
-- Reading data from sensors
-- Processing sensor data
-
-**Files:**
-
-- `Lab6_SensorIntegration.ino`
-
-## Lab 7: Motor Control
-
-**Objective:** Control motors using the Arduino.
-
-**Key Concepts:**
-
-- Using H-bridges and motor drivers
-- Controlling DC and stepper motors
-
-**Files:**
-
-- `Lab7_MotorControl.ino`
-
-## Lab 8: Final Project
-
-**Objective:** Combine multiple concepts from previous labs to create a comprehensive project.
-
-**Key Concepts:**
-
-- Project design and implementation
-- Integration of various components
-
-**Files:**
-
-- `Lab8_FinalProject.ino`
-
-## Getting Started
-
-To run the labs in this repository:
-
-1. Clone the repository: `git clone https://github.com/yourusername/EE-Microprocessors-Labs.git`
-2. Open the `.ino` files in the Arduino IDE.
-3. Upload the sketches to your Arduino board.
+To run any of the labs, navigate to the respective directory and upload the `.ino` file to your Arduino Mega 2560 using the Arduino IDE. Ensure you have all necessary libraries and headers included.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Texas State University
-- EE Microprocessors Course Instructors
-
----
-
-Feel free to modify this README to better fit your needs!
